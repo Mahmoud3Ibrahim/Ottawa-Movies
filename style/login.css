@@ -1,0 +1,265 @@
+/* Authors: Mahmoud Ibrahim, Sharmarke Yusuf, Mustafa Tareki */
+/* Section: 321, Course: CST8285 Web Programming, Assignment 02: Ottawa Movies */
+
+/* This CSS styles the Ottawa Movies login page with a header, login form, and footer. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.746), rgba(0, 0, 0, 0.754)), url('../image/background_1.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(30, 60, 90, 0.7)), url('../image/header_image.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    text-align: center;
+    flex: 1;
+}
+
+.logo a {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #ff4d6d;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #fff;
+    background-color: #ff4d6d;
+}
+
+.nav-links li a.active {
+    color: #fff;
+    background-color: #ff4d6d;
+    font-weight: bold;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+/* Login Section */
+main {
+    flex: 1;
+    padding: 100px 60px 40px;
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.login-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ff4d6d;
+    background-color: #444;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff4d6d;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e0435e;
+}
+
+.error {
+    color: #ff4d6d;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.register-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.register-link a {
+    color: #ff4d6d;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        height: auto;
+    }
+
+    .logo a {
+        font-size: 28px;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        gap: 10px;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .nav-links li a {
+        font-size: 12px;
+        padding: 6px 10px;
+        gap: 6px;
+    }
+
+    .nav-icon {
+        width: 18px;
+        height: 18px;
+        padding: 2px;
+    }
+
+    main {
+        padding: 90px 20px 20px;
+    }
+
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-container h1 {
+        font-size: 24px;
+    }
+}

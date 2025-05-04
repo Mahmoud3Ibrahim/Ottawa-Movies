@@ -1,0 +1,52 @@
+
+FlixGo - Project Setup Guide
+
+1. Requirements:
+-----------------
+- XAMPP installed on your system.
+- A modern web browser.
+- A text editor (optional), such as Visual Studio Code or Notepad++.
+
+2. Project Contents:
+-----------------------
+- Project folder: Contains PHP, CSS, and JavaScript files.
+- Database file: flixgo_db.sql
+
+3. Setup Instructions:
+------------------------
+
+A. Start the Local Server:
+- Open XAMPP.
+- Click "Start" for both Apache and MySQL.
+
+B. Copy Project Files:
+- Copy the project folder to the following directory:
+  C:\xampp\htdocs\flixgo
+
+C. Import the Database:
+1. Open a web browser and go to:
+   http://localhost/phpmyadmin
+2. Click on "New" to create a new database.
+3. Name the database: flixgo_db
+4. After creating it, select the database and go to the "Import" tab.
+5. Choose the flixgo_db.sql file from your system.
+6. Click "Go" to import the data.
+
+D. Run the Project:
+- Open a web browser and navigate to:
+  http://localhost/flixgo
+
+4. Notes:
+------------------------
+- Ensure that the database connection file (server/config.php) contains the following settings:
+  - Host: localhost
+  - Username: root
+  - Password: (leave empty)
+  - Database Name: flixgo_db
+
+- If you encounter any issues:
+  - Check that Apache and MySQL are running in XAMPP.
+  - Verify that the database name is correct.
+  - Ensure the database connection settings in config.php are properly configured.
+
+End of document.
